@@ -1,4 +1,4 @@
-package com.yonglong.thinking;
+package com.yonglong.thinking.helloword;
 
 /**
  * @author MaYongLong

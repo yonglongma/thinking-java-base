@@ -5,16 +5,10 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
-import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
-import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.index.IndexWriterConfig;
+import org.apache.lucene.index.*;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.Query;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TopScoreDocCollector;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import java.io.IOException;
@@ -42,8 +36,7 @@ public class TestLucene {
 
         //2.query
         // 创建QueryParser 用来对查询语句进行语法分析,QueryParser 调用parser 进行语法分析，形成查询语法树，放到Query 中
-        String queryStr = args.length > 0? args[0]:"Managing";
-        Query query = new QueryParser("title",analyzer).parse(queryStr);
+        FuzzyQuery  query = new FuzzyQuery (new Term("title","Lu"));
 
         //3.search
         int hitsPerPage = 10;

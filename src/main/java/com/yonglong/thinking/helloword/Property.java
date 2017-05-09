@@ -1,4 +1,4 @@
-package com.yonglong.thinking;
+package com.yonglong.thinking.helloword;
 
 import java.util.Date;
 import java.util.Properties;
