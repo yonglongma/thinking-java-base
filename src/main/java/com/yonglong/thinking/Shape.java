@@ -1,6 +1,4 @@
-package com.yonglong.object;
-
-import com.yonglong.TestMain;
+package com.yonglong.thinking;
 
 /**
  * @author MaYongLong
