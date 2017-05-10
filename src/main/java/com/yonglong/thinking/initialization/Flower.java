@@ -1,4 +1,4 @@
-package com.yonglong.thinking.init;
+package com.yonglong.thinking.initialization;
 
 /**
  * @author MaYongLong
